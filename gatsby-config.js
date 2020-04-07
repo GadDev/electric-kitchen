@@ -1,7 +1,9 @@
 const dotenv = require('dotenv')
-
+const path = require(`path`)
 if (process.env.NODE_ENV !== 'production') {
-  dotenv.config()
+  dotenv.config({
+    path: `.env.${process.env.NODE_ENV}`
+})
 }
 
 module.exports = {

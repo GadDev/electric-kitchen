@@ -6,9 +6,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Cafe`,
+    title: `Electric Kitchen Cambodia`,
     description: `  `,
-    author: `Cristiano Crolla`,
+    author: `Alexandre Gadaix`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -37,14 +37,14 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACEID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: "4rj7hd2fdkpg",
+        accessToken: "HQXJDUNIm4XIUVVMWJCrTeKhlGVOn9zecyeYOzlVMpA",
       },
     },
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `kelvinpocketcafe`, // Your Instagram
+        username: `cats_of_instagram`, // Your Instagram
       },
     },
     {

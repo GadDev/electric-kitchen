@@ -7,7 +7,7 @@ const HotDrinks = () => {
     allContentfulMenuItem(
       filter: {
         category: {
-          title: {eq: "Hot Drinks"}
+          title: {eq: "Hot drinks"}
         }
       }
     ) {

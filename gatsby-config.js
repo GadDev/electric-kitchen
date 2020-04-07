@@ -21,6 +21,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    "@contentful/gatsby-transformer-contentful-richtext",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

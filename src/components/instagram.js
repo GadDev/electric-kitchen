@@ -38,7 +38,7 @@ const Instagram = () => {
   return (
     <div className="insta">
       <h2>INSTAGRAM</h2>
-      <span>@kelvinpocketcafe</span>
+      <span>@electrickitchen</span>
       <ul className="insta-posts">
           {instaPosts.map(({ node }) => {
             return (

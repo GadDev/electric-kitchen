@@ -8,6 +8,7 @@ import Menu from '../components/menu/menu'
 import Instagram from '../components/instagram'
 import LeafletMap from '../components/leafletMap'
 import Footer from '../components/footer'
+import TitleHero from "../ui/atoms/TitleHero"
 
 const IndexPage = ({data}) => {
 
@@ -16,6 +17,7 @@ return (
     <SEO title="Home" />
     <section className="hero">
       <Img fluid={data.restaurantHero.childImageSharp.fluid} className="hero-image"/>
+      <TitleHero title="Electric Kitchen" />
     </section>
     <section className="container">
       <span className="description">
@@ -25,6 +27,9 @@ return (
         <Img fluid={data.couscous.childImageSharp.fluid} className="gallery-img1"/>
         <Img fluid={data.ceviche.childImageSharp.fluid} className="gallery-img2"/>
         <Img fluid={data.portrait.childImageSharp.fluid} className="gallery-img3"/>
+        <Img fluid={data.portrait.childImageSharp.fluid} className="gallery-img4"/>
+        <Img fluid={data.ceviche.childImageSharp.fluid} className="gallery-img5"/>
+        <Img fluid={data.couscous.childImageSharp.fluid} className="gallery-img6"/>
       </div>
       <div className="about-grid">
         <h2>WE'RE CRAZY ABOUT ELECTRIC CUISINE</h2>

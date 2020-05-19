@@ -6327,10 +6327,10 @@ gatsby-page-utils@^0.2.3:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-firebase@^0.2.0-beta.4:
-  version "0.2.0-beta.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-firebase/-/gatsby-plugin-firebase-0.2.0-beta.4.tgz#a4d8bfdce8c65efa284d0c523f8524c28f4a786c"
-  integrity sha512-F1uh9T5dY38aeNvKzqj+3K655dce1QS70wuG4bhV9L3cnTJR2vitTWyIoCvRJJfPs7Xq7LgjUDmHDrEos4S3gQ==
+gatsby-plugin-firebase@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-firebase/-/gatsby-plugin-firebase-0.1.8.tgz#0edd99db3196555c814571d68ea07f33a4127e22"
+  integrity sha512-41dDV9xMzxWzkOT2AAnXC9TQ6syb9IW5QzE4X1qOtSHk/ssyOVWNeFe7V0RkTeUZHQ8p96hJOwokaj7zJqw/9A==
 
 gatsby-plugin-manifest@^2.2.30:
   version "2.4.5"

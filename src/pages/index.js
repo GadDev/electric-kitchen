@@ -8,23 +8,13 @@ import Menu from "../components/menu/menu"
 import Instagram from "../components/instagram"
 import LeafletMap from "../components/leafletMap"
 import Footer from "../components/footer"
-// import TitleHero from "../ui/atoms/TitleHero"
-import firebase from "gatsby-plugin-firebase"
-
+import { useFirebase } from "gatsby-plugin-firebase"
 const IndexPage = ({ data }) => {
-    const [dataAnalytics, setDataAnalytics] = React.useState(null)
-
-    React.useEffect(() => {
-        firebase
-            .database()
-            .ref("/user")
-            .once("value")
-
-            .then(snapshot => {
-                setDataAnalytics(snapshot.val())
-                console.log(dataAnalytics)
-            })
-    }, [dataAnalytics])
+	useFirebase(firebase => {
+		firebase
+		  .analytics()
+		  
+	  }, [])
     return (
         <Layout>
             <SEO title="Home" />

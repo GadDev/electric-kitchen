@@ -1,9 +1,9 @@
-const dotenv = require('dotenv')
+const dotenv = require("dotenv")
 const path = require(`path`)
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   dotenv.config({
-    path: `.env.${process.env.NODE_ENV}`
-})
+    path: `.env.${process.env.NODE_ENV}`,
+  })
 }
 
 module.exports = {
@@ -57,11 +57,36 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-leaflet',
+      resolve: "gatsby-plugin-react-leaflet",
       options: {
-        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
-      }
-    }
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
+      },
+    },
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        features: {
+          auth: false,
+          database: false,
+          firestore: false,
+          storage: false,
+          messaging: false,
+          functions: false,
+          performance: false,
+          analytics: true,
+        },
+        credentials: {
+          apiKey: "YOUR_GATSBY_FIREBASE_API_KEY",
+          authDomain: "YOUR_GATSBY_FIREBASE_AUTH_DOMAIN",
+          databaseURL: "YOUR_GATSBY_FIREBASE_DATABASE_URL",
+          projectId: "YOUR_GATSBY_FIREBASE_PROJECT_ID",
+          storageBucket: "YOUR_GATSBY_FIREBASE_STORAGE_BUCKET",
+          messagingSenderId: "YOUR_GATSBY_FIREBASE_MESSAGING_SENDER_ID",
+          appId: "YOUR_GATSBY_FIREBASE_APP_ID",
+          measurementId: "YOUR_GATSBY_FIREBASE_MEASUREMENT_ID",
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

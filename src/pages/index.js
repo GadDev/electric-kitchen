@@ -2,9 +2,12 @@ import React from "react"
 import Layout from "../ui/templates/Layout"
 // import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import Menu from "../components/menu/menu"
 import InstaFeed from "../ui/molecules/InstaFeed"
+import Article from "../ui/atoms/Article"
+import Description from "../ui/atoms/Description"
+import GalleryGridImg from "../ui/molecules/GalleryGridImg"
 import LeafletMap from "../ui/molecules/leafletMap"
 import { useFirebase } from "gatsby-plugin-firebase"
 
@@ -12,61 +15,21 @@ const IndexPage = ({ data }) => {
 	useFirebase(firebase => {
 		firebase.analytics().logEvent("visited_electric-kitchen")
 	}, [])
+
+	const ImgFirstBlock = [
+		data.portrait.childImageSharp.fluid,
+		data.ceviche.childImageSharp.fluid,
+		data.couscous.childImageSharp.fluid,
+		data.portrait.childImageSharp.fluid,
+		data.ceviche.childImageSharp.fluid,
+		data.couscous.childImageSharp.fluid,
+	]
 	return (
-		<Layout>
-			<section className="hero">
-				<Img
-					fluid={data.restaurantHero.childImageSharp.fluid}
-					className="hero-image"
-				/>
-				<h1 style={{ zIndex: 1, color: "white" }}>Electric Kitchen</h1>
-			</section>
+		<Layout srcImg={data.restaurantHero.childImageSharp.fluid}>
 			<section className="container">
-				<span className="description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua.
-				</span>
-				<div className="gallery-grid">
-					<Img
-						fluid={data.portrait.childImageSharp.fluid}
-						className="gallery-img1"
-					/>
-					<Img
-						fluid={data.ceviche.childImageSharp.fluid}
-						className="gallery-img2"
-					/>
-					<Img
-						fluid={data.couscous.childImageSharp.fluid}
-						className="gallery-img3"
-					/>
-					<Img
-						fluid={data.portrait.childImageSharp.fluid}
-						className="gallery-img4"
-					/>
-					<Img
-						fluid={data.ceviche.childImageSharp.fluid}
-						className="gallery-img5"
-					/>
-					<Img
-						fluid={data.couscous.childImageSharp.fluid}
-						className="gallery-img6"
-					/>
-				</div>
-				<div className="about-grid">
-					<h2>We're crazy about electric Cuisine</h2>
-					<p>
-						The story this year just after the Lunar New Year in
-						Vietnam, we decide to continue our journey to Cambodia.
-						We stopped at Phnom Penh, and discovered the "country of
-						smiles", received an electric shock. That's how Electric
-						Kitchen was created, after get experience in differents
-						restaurant accross the world (Paris, Tours, London,
-						Perth, Melbourne, Montreal). We had this electric dream,
-						it becomes true at the 308 Street nearby the famous
-						Bassac Lane.
-					</p>
-				</div>
+				<Description />
+				<GalleryGridImg images={ImgFirstBlock} />
+				<Article />
 			</section>
 			<div className="parallax"></div>
 			<section className="container">

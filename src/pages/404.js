@@ -1,11 +1,19 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../ui/templates/Layout"
 
-const NotFoundPage = () => (
-	<Layout seoTitle="404: Not found">
-		<h1>NOT FOUND</h1>
-		<p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-	</Layout>
+const NotFoundPage = ({ data }) => (
+	<Layout
+		seoTitle="404: Not found"
+		srcImg={data.restaurantHero.childImageSharp.fluid}
+		title="Page not found"
+	></Layout>
 )
-
+export const page404Query = graphql`
+	query {
+		restaurantHero: file(relativePath: { eq: "hero.jpeg" }) {
+			...fluidImage
+		}
+	}
+`
 export default NotFoundPage

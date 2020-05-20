@@ -16,8 +16,8 @@ function Footer() {
 				</div>
 				<div className="contact">
 					<h3>Contact</h3>
-					<span></span>
-					<span>@electricKitchen</span>
+					<span>+855 69 805 467</span>
+					<span>electrickitchen308@gmail.com</span>
 				</div>
 			</section>
 			<p>© 2020 308 Electric Kitchen.</p>

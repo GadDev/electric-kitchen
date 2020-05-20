@@ -8,10 +8,11 @@ main {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 	padding: 2rem;
 
-	.hero-image {
+	.hero-image,
+	.hero-image-mobile {
 		filter: grayscale(1);
 		top: 0px;
 		left: 0px;
@@ -20,10 +21,23 @@ main {
 		background-color: rgb(255, 255, 255);
 		position: absolute !important;
 	}
+	.hero-image-mobile {
+		display: block;
+	}
+	.hero-image {
+		display: none;
+	}
 
 	@media screen and (min-width: 768px) {
 		padding: 10rem;
 		font-size: $xl-size;
+		align-items: center;
+		.hero-image {
+			display: block;
+		}
+		.hero-image-mobile {
+			display: none;
+		}
 	}
 }
 

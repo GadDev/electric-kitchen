@@ -48,7 +48,7 @@ function Instagram() {
 	})
 	return (
 		<div className="insta">
-			<h2>INSTAGRAM</h2>
+			<h2>Instagram</h2>
 			<span>@electrickitchen</span>
 			<ul className="insta-posts">{renderPosts}</ul>
 		</div>

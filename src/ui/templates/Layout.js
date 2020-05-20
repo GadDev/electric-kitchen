@@ -15,7 +15,7 @@ import Footer from "../organisms/Footer"
 import Hero from "../molecules/Hero"
 import "../../styles/styles.scss"
 
-function Layout({ children, seoTitle = "Welcome to the 308 Electric Kitchen", srcImg, title }) {
+function Layout({ children, seoTitle = "Welcome to the 308 Electric Kitchen", srcImg, imgSrcMob, title }) {
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -30,7 +30,7 @@ function Layout({ children, seoTitle = "Welcome to the 308 Electric Kitchen", sr
 		<>
 			<SEO title={seoTitle} />
 			<Header siteTitle={data.site.siteMetadata.title} />
-			<Hero imgSrc={srcImg} title={title} />
+			<Hero imgSrc={srcImg} title={title} imgSrcMob={imgSrcMob} />
 			<div>
 				<main>{children}</main>
 			</div>
